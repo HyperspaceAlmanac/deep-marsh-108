@@ -13,12 +13,12 @@ I have not worked on any side projects in a while, and while watching the 1998 a
 
 One of the main advantages of deep neural networks is that it can process a lot of data without overfitting. Rather than training the DNN on the game control inputs or basic AI behavior, what if I create a more complex simulation of the human body and teach the DNN martial arts?
 
-![Basic diagram of the system](/assets/img/BasicDiagram.jpg)
+![Basic diagram of the system]({{site.baseurl}}/assets/img/BasicDiagram.jpg)
 
 
 Using https://setpose.com/ to demonstrate a basic mannequin throwing a punch, there are many muscle movements to make it happen. 
 
-![Basic diagram of the system](/assets/img/basicModel.jpg)
+![Basic diagram of the system]({{site.baseurl}}/assets/img/basicModel.jpg)
 
 I want to have the DNN generate a large vector with values for all the muscle movements that the simulator can process to perform some action. I will have to figure out how to work out the timing (potentially need to do a long sequence of muscle movements over a peroid of time).
 
