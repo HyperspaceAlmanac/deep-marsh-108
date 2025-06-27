@@ -5,8 +5,6 @@ date:   2025-06-24 22:51:59 -0700
 categories: update
 permalink: "/updates/update1"
 ---
-# TODO: Add pictures
-
 ## The Inspiration
 
 I have not worked on any side projects in a while, and while watching the 1998 adapation of Water Margin(as you can probably already tell with the many references to the series), I had intrusive thoughts about training a deep neural network and teaching it martial arts. Expanding it a step further, I see potential in deep neural network as a game pregression system. Unlike soem of my other ideas, I see a lot of potential in this effort.
@@ -15,7 +13,16 @@ I have not worked on any side projects in a while, and while watching the 1998 a
 
 One of the main advantages of deep neural networks is that it can process a lot of data without overfitting. Rather than training the DNN on the game control inputs or basic AI behavior, what if I create a more complex simulation of the human body and teach the DNN martial arts?
 
-In its simplest form, potentially an idle game or auto-battler where you have your character train and fight opponents. As the character trains and fight opponents, it is updating the DNN to keep on getting better at it. It could also be a very flexible system, where it can be a plug that can just be used to generate some cool attack animations.
+![Basic diagram of the system](/assets/img/BasicDiagram.jpg)
+
+
+Using https://setpose.com/ to demonstrate a basic mannequin throwing a punch, there are many muscle movements to make it happen. 
+
+![Basic diagram of the system](/assets/img/basicModel.jpg)
+
+I want to have the DNN generate a large vector with values for all the muscle movements that the simulator can process to perform some action. I will have to figure out how to work out the timing (potentially need to do a long sequence of muscle movements over a peroid of time).
+
+In terms of basic practical application of such a system, I am thinking of a basic idle game or auto-battler where you have your character train and fight opponents. As the character trains and fight opponents, it is updating the DNN to keep on getting better at it. It could also be a very flexible system, where it can be a plug that can just be used to generate some cool attack animations.
 
 Once I set up the simulation, I can also use it to define the error function to determine how well the model is perfomring based on the inputs. The model can be evaluated on how well it moves the muscle to attack(does it hit the target? How strong is the impact? How vulnerable is it to coutner-attack), defend against attacks(how well it mitigates incoming attacks), and can also be evaluated based on other factors such the personality of the character (impulsive vs observant / reactive) and other factors such as the purpose of the move (pokes should be fast and safer versus more powerful high commitment moves).
 
